@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>BOBSDELLE4310</Machine>
+    <WindowsUser>Bob</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\bin\Debug\TicTacToe.exe">
+      <PackagePath>TicTacToe.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\bin\Debug\TicTacToe.pdb">
+      <PackagePath>TicTacToe.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\MonoGame.Framework.Windows8.pdb">
+      <PackagePath>MonoGame.Framework.Windows8.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\MonoGame.Framework.Windows8.dll">
+      <PackagePath>MonoGame.Framework.Windows8.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.dll">
+      <PackagePath>SharpDX.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.XAudio2.dll">
+      <PackagePath>SharpDX.XAudio2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.Direct3D11.dll">
+      <PackagePath>SharpDX.Direct3D11.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.Direct2D1.dll">
+      <PackagePath>SharpDX.Direct2D1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.DXGI.dll">
+      <PackagePath>SharpDX.DXGI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.MediaFoundation.dll">
+      <PackagePath>SharpDX.MediaFoundation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.xml">
+      <PackagePath>SharpDX.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.XAudio2.xml">
+      <PackagePath>SharpDX.XAudio2.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.Direct3D11.xml">
+      <PackagePath>SharpDX.Direct3D11.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.Direct2D1.xml">
+      <PackagePath>SharpDX.Direct2D1.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.DXGI.xml">
+      <PackagePath>SharpDX.DXGI.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\GitHub\Sickheadgames\MonoGame\MonoGame.Framework\bin\Debug\SharpDX.MediaFoundation.xml">
+      <PackagePath>SharpDX.MediaFoundation.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\TicTacToeBadgeLogo.png">
+      <PackagePath>Assets\TicTacToeBadgeLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\LooksFamiliarSplash.png">
+      <PackagePath>Assets\LooksFamiliarSplash.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\TicTacToeSmallLogo.png">
+      <PackagePath>Assets\TicTacToeSmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\TicTacToeLogo.png">
+      <PackagePath>Assets\TicTacToeLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\TicTacToeStorelogo.png">
+      <PackagePath>Assets\TicTacToeStorelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\Assets\TicTacToeWideLogo.png">
+      <PackagePath>Assets\TicTacToeWideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Bob\Documents\Visual Studio 2012\Projects\TicTacToe\TicTacToe\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
