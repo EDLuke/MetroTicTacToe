@@ -20,9 +20,11 @@ namespace TicTacToe
         public static WindowState _windowState;
         public static CoreWindow _window;
         public static Rect _windowsBounds;
+        public static bool _startup;
 
         public static void Initialize()
         {
+            _startup = true;
             _window = CoreWindow.GetForCurrentThread();
             _windowsBounds = _window.Bounds;
             _windowState = WindowState.Full;

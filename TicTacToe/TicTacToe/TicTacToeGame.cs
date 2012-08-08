@@ -1,6 +1,11 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace TicTacToe
 {
@@ -19,9 +24,11 @@ namespace TicTacToe
 
         Background background;
         Board board;
-        Player playerX;
-        Player playerO;
+        SmartPlayer playerX;
+        SmartPlayer playerO;
         NewGameTile newGameTile;
+
+        MessageDialog gameType;
 
         public TicTacToe() : base()
         {
@@ -39,17 +46,47 @@ namespace TicTacToe
         {
             background = new Background();
             board = new Board();
-            playerX = new Player();
-            playerO = new Player();
+            playerX = new SmartPlayer(board);
+            playerO = new SmartPlayer(board);
             newGameTile = new NewGameTile();
 
             GameState.Initialize();
             GameState._whosTurn = PlayerTurn.O; // should make this random
             GameState._gameOver = false;
 
-            IsMouseVisible = true; 
+            IsMouseVisible = true;
+
+            gameType = new MessageDialog("One player or two player?");
 
             base.Initialize();
+        }
+
+        private void GameTypeDialog()
+        {
+            gameType.Title = "Tic Tac Toe";
+
+            // Add commands and set their callbacks; both buttons use the same callback function instead of inline event handlers
+            gameType.Commands.Add(new UICommand("One player", new UICommandInvokedHandler(this.OnSetGameType)));
+            gameType.Commands.Add(new UICommand("Two player", new UICommandInvokedHandler(this.OnSetGameType)));
+
+            // Set the command that will be invoked by default
+            gameType.DefaultCommandIndex = 0;
+
+            // Set the command to be invoked when escape is pressed
+            gameType.CancelCommandIndex = 0;
+        }
+
+        private void OnSetGameType(IUICommand command)
+        {
+            if (command.Label.Equals("Two player"))
+                playerX.IsPerson = true;
+            else
+                playerX.IsPerson = false;
+        }
+
+        public async void ShowGameTypeDialog()
+        {
+            await gameType.ShowAsync();
         }
 
         protected void ResetGame()
@@ -58,6 +95,7 @@ namespace TicTacToe
 
             board = null;
             board = new Board();
+            playerX.Board = board;
             board.Initialize(Content, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 
             GameState._whosTurn = PlayerTurn.O; // should make this random
@@ -84,7 +122,10 @@ namespace TicTacToe
 
             WinnerClip = Content.Load<SoundEffect>("Winner");
             DrawClip = Content.Load<SoundEffect>("Draw");
+
+            GameTypeDialog();
         }
+
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -104,6 +145,13 @@ namespace TicTacToe
         {
             //if (Keyboard.GetState().IsKeyDown(Keys.Escape))
             //    Exit();
+
+            // if this is our first time in, ask the user what type of game it is, one player or two
+            if (GameState._startup)
+            {
+                ShowGameTypeDialog();
+                GameState._startup = false;
+            }
 
             // check to see if we have a winner yet
             Winner winner = board.GetWinner();
@@ -179,7 +227,7 @@ namespace TicTacToe
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
+        protected async override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.White);
 
@@ -229,8 +277,8 @@ namespace TicTacToe
 
                     // draw the state of the board and the player scores
                     board.Draw(spriteBatch);
-                    playerX.Draw(spriteBatch, 0.05); 
                     playerO.Draw(spriteBatch, 0.83);
+                    playerX.Draw(spriteBatch, 0.05);
 
                     if (GameState._gameOver == true)
                     {
@@ -254,6 +302,7 @@ namespace TicTacToe
             spriteBatch.End();
 
             base.Draw(gameTime);
+
         }
     }
 }
